@@ -22,3 +22,24 @@ This repo is my personal log of:
 ---
 
 ## 📂 Folder Structure
+aws-learning-journey/
+│
+├── 00-certificates/
+│   └── aws-cloud-essentials-certificate.pdf
+│
+├── 01-cloud-fundamentals/
+│   ├── notes.md
+│   └── key-concepts.md
+│
+├── 02-aws-labs/
+│   ├── s3-static-website/
+│   │   ├── README.md
+│   │   └── screenshots/
+│   ├── ec2-launch-demo/
+│   │   ├── README.md
+│   │   └── screenshots/
+│   └── lambda-function-demo/
+│       ├── README.md
+│       └── screenshots/
+│
+└── README.md
