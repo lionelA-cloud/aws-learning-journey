@@ -28,7 +28,7 @@ aws-learning-journey/
 
 | Status | Certificate | Description | Date |
 |:-------:|:-------------|:-------------|:------|
-| ✅ | [AWS Cloud Practitioner Essentials –Completion Certificate](./[00-certificates/aws-cloud-practitioner-essentials-completion-certificate.pdf) | Completed foundational AWS training covering global infrastructure, pricing, and core services. | Oct 2025 |
+| ✅ | [AWS Cloud Practitioner Essentials –Completion Certificate](./00-certificates/aws-cloud-practitioner-essentials-completion-certificate.pdf) | Completed foundational AWS training covering global infrastructure, pricing, and core services. | Oct 2025 |
 | ⏳ | AWS Certified Cloud Practitioner | Official AWS entry-level certification validating understanding of AWS Cloud concepts, billing, and support. | Target: Dec 2025 |
 | 🔜 | AWS Solutions Architect – Associate | Learn to design resilient, high-performing, and cost-optimized architectures using AWS services. | Target: Mar 2026 |
 | 🔜 | AWS SysOps Administrator – Associate | Focuses on deployment, management, and operational aspects of AWS systems. | Target: Jun 2026 |
