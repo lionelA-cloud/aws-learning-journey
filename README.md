@@ -49,8 +49,14 @@ aws-learning-journey/
 | 🟨 | AWS Solutions Architect – Associate | ⏳ Upcoming |
 | ⬜ | AWS SysOps Administrator – Associate | ⏳ Planned |
 | ⬜ | AWS DevOps Engineer – Professional | ⏳ Future Goal |
-<!-- PROGRESS_END -->
 
+### 🧭 Milestone Tracker
+- [x] AWS Cloud Practitioner Essentials Training Completed
+- [ ] AWS Certified Cloud Practitioner Exam
+- [ ] AWS Solutions Architect – Associate
+- [ ] AWS SysOps Administrator – Associate
+- [ ] AWS DevOps Engineer – Professional
+<!-- PROGRESS_END -->
 │
 ├── 01-cloud-fundamentals/
     ├── notes.md
