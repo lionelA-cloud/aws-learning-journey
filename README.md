@@ -60,5 +60,5 @@ aws-learning-journey/
 
 ## 🔗 Connect with Me
 - 💼 [LinkedIn Profile](https://linkedin.com/in/lionel-a-56781112a/)
-- 🌍 [Portfolio Website (coming soon)]()
+
 
