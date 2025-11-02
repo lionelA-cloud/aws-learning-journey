@@ -35,28 +35,26 @@ aws-learning-journey/
 | 🔜 | AWS DevOps Engineer – Professional | Advanced certification validating automation, CI/CD pipelines, monitoring, and infrastructure as code skills. | Target: Oct 2026 |
 ---
 ---
-
 ## 🚀 Learning Roadmap Progress
 ### 🎯 Goal: Become an AWS Cloud & DevOps Engineer  
-| Stage | Certification                                          | Progress       |
-| :---- | :----------------------------------------------------- | :------------- |
-| 🟩    | AWS Cloud Practitioner Essentials (Training Completed) | ✅ Done         |
-| 🟩    | AWS Certified Cloud Practitioner                       | 🕓 In Progress |
-| 🟨    | AWS Solutions Architect – Associate                    | ⏳ Upcoming     |
-| ⬜     | AWS SysOps Administrator – Associate                   | ⏳ Planned      |
-| ⬜     | AWS DevOps Engineer – Professional                     | ⏳ Future Goal  |
-
-
+🟩🟩🟩🟨⬜⬜⬜⬜⬜⬜  **30% Complete**
+| Stage | Certification | Progress |
+|:------|:--------------|:----------|
+| 🟩 | AWS Cloud Practitioner Essentials (Training Completed) | ✅ Done |
+| 🟩 | AWS Certified Cloud Practitioner | 🕓 In Progress |
+| 🟨 | AWS Solutions Architect – Associate | ⏳ Upcoming |
+| ⬜ | AWS SysOps Administrator – Associate | ⏳ Planned |
+| ⬜ | AWS DevOps Engineer – Professional | ⏳ Future Goal|
 │
 ├── 01-cloud-fundamentals/
-│   ├── notes.md
-# ☁️ AWS Cloud Fundamentals — Notes
+    ├── notes.md
+    # ☁️ AWS Cloud Fundamentals — Notes
 
-## Key Cloud Concepts
-- **Scalability:** Automatically handle more users or requests.
-- **Elasticity:** Scale resources up or down as needed.
-- **High Availability:** Minimize downtime across multiple regions.
-- **Security:** Shared responsibility model — AWS secures the cloud, you secure what’s in it.
+   ## Key Cloud Concepts
+   - **Scalability:** Automatically handle more users or requests.
+   - **Elasticity:** Scale resources up or down as needed.
+   - **High Availability:** Minimize downtime across multiple regions.
+   - **Security:** Shared responsibility model — AWS secures the cloud, you secure what’s in it.
 
 ## AWS Core Services
 | Service | Purpose |
