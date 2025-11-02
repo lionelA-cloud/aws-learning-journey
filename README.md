@@ -37,8 +37,15 @@ aws-learning-journey/
 ---
 
 ## 🚀 Learning Roadmap Progress
-
 ### 🎯 Goal: Become an AWS Cloud & DevOps Engineer  
+| Stage | Certification                                          | Progress       |
+| :---- | :----------------------------------------------------- | :------------- |
+| 🟩    | AWS Cloud Practitioner Essentials (Training Completed) | ✅ Done         |
+| 🟩    | AWS Certified Cloud Practitioner                       | 🕓 In Progress |
+| 🟨    | AWS Solutions Architect – Associate                    | ⏳ Upcoming     |
+| ⬜     | AWS SysOps Administrator – Associate                   | ⏳ Planned      |
+| ⬜     | AWS DevOps Engineer – Professional                     | ⏳ Future Goal  |
+
 
 │
 ├── 01-cloud-fundamentals/
