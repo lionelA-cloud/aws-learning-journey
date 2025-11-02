@@ -24,8 +24,16 @@ This repo is my personal log of:
 ## 📂 Folder Structure
 aws-learning-journey/
 │
-├── 00-certificates/
-│   └── aws-cloud-essentials-certificate.pdf
+## 🏅 Certificates
+
+| Status | Certificate | Description | Date |
+|:-------:|:-------------|:-------------|:------|
+| ✅ | [AWS Cloud Practitioner Essentials – Completion Certificate](./00-certificates/aws-cloud-practitioner-essentials-training-completion.pdf) | Completed foundational AWS training covering global infrastructure, pricing, and core services. | Oct 2025 |
+| ⏳ | AWS Certified Cloud Practitioner | Official AWS entry-level certification validating understanding of AWS Cloud concepts, billing, and support. | Target: Dec 2025 |
+| 🔜 | AWS Solutions Architect – Associate | Learn to design resilient, high-performing, and cost-optimized architectures using AWS services. | Target: Mar 2026 |
+| 🔜 | AWS SysOps Administrator – Associate | Focuses on deployment, management, and operational aspects of AWS systems. | Target: Jun 2026 |
+| 🔜 | AWS DevOps Engineer – Professional | Advanced certification validating automation, CI/CD pipelines, monitoring, and infrastructure as code skills. | Target: Oct 2026 |
+---
 │
 ├── 01-cloud-fundamentals/
 │   ├── notes.md
