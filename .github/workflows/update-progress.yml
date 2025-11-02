@@ -1,0 +1,110 @@
+name: Update Progress Bar
+
+on:
+  # update on push to main (so any change to README triggers it)
+  push:
+    branches: [ "main" ]
+    paths:
+      - "README.md"
+  # allow manual run from Actions tab
+  workflow_dispatch:
+  # optional: weekly update (can remove if you don't want cron)
+  schedule:
+    - cron: '0 12 * * 1'  # every Monday at 12:00 UTC
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Update progress block in README.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python - <<'PY'
+          import re, math, subprocess, os, sys
+
+          README='README.md'
+          start_marker='<!-- PROGRESS_START -->'
+          end_marker='<!-- PROGRESS_END -->'
+
+          with open(README, 'r', encoding='utf-8') as f:
+              text = f.read()
+
+          if start_marker not in text or end_marker not in text:
+              print("Markers not found in README.md. Exiting.")
+              sys.exit(0)
+
+          # extract block
+          pattern = re.compile(re.escape(start_marker) + r'(.*?)' + re.escape(end_marker), re.DOTALL)
+          match = pattern.search(text)
+          if not match:
+              print("Progress block not found.")
+              sys.exit(0)
+
+          block = match.group(1)
+
+          # Count total checklist items inside block (lines like - [ ] or - [x])
+          checklist = re.findall(r'^\s*[-*]\s*\[(?: |x|X)\]\s+', block, re.MULTILINE)
+          total = len(checklist)
+
+          # Count completed items (checked boxes - [x] or - [X])
+          completed = len(re.findall(r'^\s*[-*]\s*\[ *[xX]\s*\]\s+', block, re.MULTILINE))
+
+          # If no checklist items found, fallback: look for the table rows as stages (excluding header)
+          if total == 0:
+              # count number of rows under the '|' table (simple heuristic)
+              rows = re.findall(r'^\|\s*([^\|]+)\|\s*([^\|]+)\|\s*([^\|]+)\|', block, re.MULTILINE)
+              # skip header row if present
+              total = max(len(rows), 5)  # default to 5 stages if can't detect
+              # try to infer completed from "✅ Done" occurrences
+              completed = len([r for r in rows if '✅' in r[2]])
+              completed = completed if completed > 0 else 1  # ensure at least 1
+
+          # compute percentage
+          percent = int(round((completed / total) * 100))
+
+          # build emoji bar of length 10
+          filled_blocks = int(round((percent / 100) * 10))
+          bar = '🟩' * filled_blocks + '🟨' * (1 if percent>0 and filled_blocks<10 and percent%10!=0 else 0)
+          bar += '⬜' * (10 - len(bar))
+          percent_text = f"{bar}  **{percent}% Complete**"
+
+          # optional: also create progress-bar.dev badge URL (will render as image)
+          badge_url = f"https://progress-bar.dev/{percent}/?title=Complete"
+
+          # assemble new block content
+          new_inner = "\n" + percent_text + "\n\n" + re.sub(r'^\n+|\n+$', '', block.strip()) + "\n"
+
+          new_text = pattern.sub(start_marker + new_inner + end_marker, text)
+
+          if new_text == text:
+              print("No changes required.")
+              sys.exit(0)
+
+          with open(README, 'w', encoding='utf-8') as f:
+              f.write(new_text)
+
+          # configure git and commit
+          subprocess.run(['git', 'config', 'user.name', 'github-actions[bot]'])
+          subprocess.run(['git', 'config', 'user.email', '41898282+github-actions[bot]@users.noreply.github.com'])
+          subprocess.run(['git', 'add', README])
+          commit = subprocess.run(['git', 'commit', '-m', f'Auto-update progress: {percent}%'], stderr=subprocess.PIPE, text=True)
+          if commit.returncode == 0:
+              subprocess.run(['git', 'push', 'origin', 'HEAD:main'])
+              print(f"Updated README to {percent}% and pushed.")
+          else:
+              print("Nothing to commit or commit failed:", commit.stderr)
+          PY
+
+      - name: Done
+        run: echo "Progress update step completed."
