@@ -37,7 +37,45 @@ aws-learning-journey/
 │
 ├── 01-cloud-fundamentals/
 │   ├── notes.md
+# ☁️ AWS Cloud Fundamentals — Notes
+
+## Key Cloud Concepts
+- **Scalability:** Automatically handle more users or requests.
+- **Elasticity:** Scale resources up or down as needed.
+- **High Availability:** Minimize downtime across multiple regions.
+- **Security:** Shared responsibility model — AWS secures the cloud, you secure what’s in it.
+
+## AWS Core Services
+| Service | Purpose |
+|----------|----------|
+| EC2 | Virtual servers for compute power |
+| S3 | Object storage for files and data |
+| RDS | Managed relational databases |
+| IAM | Identity & Access Management |
+| CloudWatch | Monitoring and alerts |
+| Lambda | Run code without managing servers |
+
+---
+
+## Cost and Pricing
+- **Pay-as-you-go model**
+- **Free Tier** gives 12 months of limited usage
+- Use **AWS Pricing Calculator** to estimate monthly costs
+
+---
+
+## My Takeaway
+AWS services are deeply interconnected — understanding how they fit together is key to designing efficient systems.
+
 │   └── key-concepts.md
+# AWS Key Concepts Summary
+
+- **Region:** Physical location of data centers.
+- **Availability Zone (AZ):** Isolated data centers within a region.
+- **Edge Location:** Used by CloudFront for caching content close to users.
+- **VPC (Virtual Private Cloud):** Isolated network for your AWS resources.
+- **IAM (Identity and Access Management):** Controls who can access what.
+- **S3 Bucket:** Folder-like storage for any type of file.
 │
 ├── 02-aws-labs/
 │   ├── s3-static-website/
