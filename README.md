@@ -43,3 +43,22 @@ aws-learning-journey/
 │       └── screenshots/
 │
 └── README.md
+
+---
+
+
+---
+
+## 💡 Future Goals
+- [ ] Pass the **AWS Certified Cloud Practitioner** exam  
+- [ ] Launch projects using the AWS Free Tier  
+- [ ] Learn Infrastructure as Code (IaC) with Terraform or CloudFormation  
+- [ ] Earn the **AWS Solutions Architect – Associate** certification  
+- [ ] Build a complete CI/CD pipeline as a DevOps project  
+
+---
+
+## 🔗 Connect with Me
+- 💼 [LinkedIn Profile](https://linkedin.com/in/lionel-a-56781112a/)
+- 🌍 [Portfolio Website (coming soon)]()
+
