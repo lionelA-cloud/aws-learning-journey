@@ -34,6 +34,12 @@ aws-learning-journey/
 | 🔜 | AWS SysOps Administrator – Associate | Focuses on deployment, management, and operational aspects of AWS systems. | Target: Jun 2026 |
 | 🔜 | AWS DevOps Engineer – Professional | Advanced certification validating automation, CI/CD pipelines, monitoring, and infrastructure as code skills. | Target: Oct 2026 |
 ---
+---
+
+## 🚀 Learning Roadmap Progress
+
+### 🎯 Goal: Become an AWS Cloud & DevOps Engineer  
+
 │
 ├── 01-cloud-fundamentals/
 │   ├── notes.md
